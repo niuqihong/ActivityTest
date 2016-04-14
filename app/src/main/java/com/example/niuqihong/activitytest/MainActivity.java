@@ -1,5 +1,6 @@
 package com.example.niuqihong.activitytest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -25,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-finish();            }
+                finish();//销毁当前的活动
+            }
         });
     }
 
@@ -48,6 +50,10 @@ finish();            }
             System.out.print("11111");
             Toast.makeText(MainActivity.this,"111",Toast.LENGTH_SHORT).show();
             return true;
+        }else if (id == R.id.add_item){
+            //使用显示的intent 转换activity
+            Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

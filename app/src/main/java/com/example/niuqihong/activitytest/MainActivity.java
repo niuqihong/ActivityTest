@@ -1,6 +1,7 @@
 package com.example.niuqihong.activitytest;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -53,6 +54,16 @@ public class MainActivity extends AppCompatActivity {
         }else if (id == R.id.add_item){
             //使用显示的intent 转换activity
             Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.remove_item){
+            //使用隐式的Intent
+            Intent intent = new Intent("com.example.activitytest.ACTION_START1");
+            intent.addCategory("com.example.activitytest.MY_CATEGORY");
+            startActivity(intent);
+        }else if (id == R.id.url_intent){
+            //用Intent启动网页
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("http://www.baidu.com"));
             startActivity(intent);
         }
 

@@ -25,7 +25,10 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //在intent之间传输数据
+                String stringData = "use Intent Activity pass data";
                 Intent intent = new Intent(MainActivity.this,ThirdActivity.class);
+                intent.putExtra("extar_date",stringData);
                 startActivity(intent);
             }
         });

@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 //在intent之间传输数据
                 String stringData = "use Intent Activity pass data";
                 Intent intent = new Intent(MainActivity.this,ThirdActivity.class);
-                intent.putExtra("extar_date",stringData);
+                intent.putExtra("extar_data",stringData);
                 startActivity(intent);
             }
         });

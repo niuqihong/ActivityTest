@@ -17,7 +17,7 @@ public class ThirdActivity extends AppCompatActivity {
         //获取intent 之间传输的数据
         Intent intent = getIntent();
         String data = intent.getStringExtra("extar_data");
-        Toast.makeText(ThirdActivity.this,data,Toast.LENGTH_SHORT).show();
+        Toast.makeText(ThirdActivity.this,data,Toast.LENGTH_LONG).show();
 //        Log.d(TAG, "onCreate:data ");
 
 
